@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insight Bookstore - Home</title>
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav>
         <div class="logo">📚 Insight Bookstore</div>
-         
-           <a href="index.html" class="active">home</a>
-           <a href="about.html">About</a>
-           <a href="books.html">Books</a>
-           <a href="contact.html">Contact</a>
-    
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="books.html">Books</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -48,5 +49,12 @@
     <footer>
         <p>&copy; 2023 Insight Bookstore. All rights reserved.</p>
     </footer>
+    
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navMenu');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
